@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <meta charset="utf-8">
+        <style>
+            dt{
+             font-weight: bold;
+               
+            }
+            body{
+                padding-right: 100px;
+                padding-left: 100px;
+                line-height: 1.2;
+               background: linear-gradient(to right, skyblue, white);
+                
+            }
+            p{
+                font-weight: 100;
+            }
+            body{
+                background-image: ("back.jpg");
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="all.css">
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav>
+        <header><center>Computer Explorer</center></header>
+        <ul class="nav_ul">
+            <li><a href="index.html" class="nav_a">Home  </a></li>
+        </ul></nav>
+    <h2>Breif Introduction</h2>
+   <details>
+   <summary>CSS</summary>
+   <p>Standing for Cascading stylesheet, CSS is used to style the 
+   visual apperance of a html document. It's a cascading because
+   it arranges elements appear as we want.
+   CSS is mainatined by the W3C organization who publishes it's especifications(A document containing how it's suppose to behave).
+  </details>
+<!-—————————————>
+ <details>
+  <summary>Declaring you're using CSS </summary>
+  <p>the first thing to do in css is to tell that there is some css code to implement to our page. there are 3 ways to do it.<br> </p>
+  <ol>
+   <li>
+    <xmp>
+     <link rel="stylesheet" href="styles.css"> 
+    </xmp>
+    This line of code is put in the head 
+    tag and is one of the ways to declare that we have a css. The quotation in href contains the name of the css document which contains our csss.
+   </li>
+   <li></li>
+  </ol>
+ </details>
+ <details><summary>Selecters</summary>
+  <p>To style html, we target certain, or multiple elememts. for example, to change the color of every p tag in the page:<br>
+  </p>
+  <xmp>p{
+   color: red;
+  }</xmp>
+  <p>p in here is the selecter.
+ </details>
+ <details><summary>innate behavior of elements</summary>
+  <p>Browsers, by defeult, add styling. That is why lists show up in bullets to begin with without we adding style. We can, however, modify that imnnate style rendered by the bnrowser. For example, you can remove the bullets of li by:<br>></p>
+  <xmp>
+   li{
+    list-style-type: none;
+   }
+  </xmp>
+  </details>
+  
+ <!————11/22/19-———>
+  <details>
+   <summary>classes</summary>
+   <p>Sometimes, we not only want styling certain elements of our page, such as all p tags, but we also want to apply a style to a subset of an element, like some of the p tags and not the others. this is why classes exit. You add a class="name" to the inside of the opening tags of the elements you need to add to your class. Later in the css, you cna target that class using the name u gave it. For example<br>:</p>
+   <xmp>
+   .myClass{
+   color: orange
+   }</xmp>
+   <p>Is a code that targets only the elements containing the class myclass. If you added this class to say, some li and p tags, and u only want to target the ptags this time. Your selecter know becomes:<br>p.myClass<br>>
+  </details>
+  <details><summary>Selecting based on on Location in Document</summary>
+  <p>There are several ways to achieve this. (a) the descendant combinator. The code<br></p>
+  <xmp>li em{
+   color: blue;
+  }</xmp><p>Changes the color of emphasis tag. only within an li. The em is a decendent of li.(b)Adjacent Sibling Combinator(+). The code:<br></p>
+   <xmp>
+    h1+p{
+     font-size: 200%;
+    }</xmp>
+    Styles a paragraph when it comes directly after a heading at the same hierarchy level in html.
+  </details>
+  <details>
+   <summary>Styling based on state</summary>
+   <p>An element has states. For instance, wether it's being hovered over, was visited focused via keyboard and so on. Below, we style visited links green, unvisited once blue and hovered oevr once yellow.</p>
+   <xmp>
+    a:visited{
+     color: green;
+    }
+    a:link{
+     color: blue;
+    }
+    a:hover{
+     color: yellow;
+    }
+   </xmp>
+   <p>You can combine the concepts above and be very abstract.s
+  </details>
+    
+   <!-—————— 11/26/2019 -——>
+
+      <details>
+       <summary>functions</summary>
+       <p>There are some functions(methods who do things) in CSS. For example, the culc function which allows you to do simple math with CSS. For example:<br></p>
+       <xmp>
+        .outer-box{
+         border = 5px solid black;
+        }
+        .inner-box{
+         padding = 10px;
+         width: calc(90%-30px);
+         background-color: rebeccapurple;
+         color: white }
+       </xmp>
+       <p>gives the inner box is 90% of the containing element width -30 pixels. Another example is the values of the transform property. For example, transform: rotate(0.8turn);, which rotates it clockwise 80%; of a turn.</p>
+      </details>
+      <details>
+       <summary>@rules</summary>
+       <p>The at-rules are especiel rules that instruct CSS hwo to behave. Take for example:<br></p>
+       <xmp>
+        @import 'styles2.css';
+       </xmp>
+    <p>which simpy tells css to also follow the rules the file styles2.css</p>
+          <p>Another example is the @media rule, which allows you to use media quries to apply CSS only when certian conditions are true. Case in point:<br></p>
+     <xmp>
+      @media (min-wdith: 30em){
+       body{
+        background-color: blue;
+       }
+      }
+     </xmp>
+          <p>The CSS encapsulated by the @media (min-width: 30em) selecter. with viewport more than 30. A vieport is the part of the page visible to teh browser. When em is used in properties like font-size: 2em, it makes the fot size of the respective element twice it's parent. </p>
+          <p>Further, when loading a css we can either load it or not based on an attribute called media with value = "screen and (max-device-width: 40px)"</p>
+      </details>
+
+      <details>
+       <summary>shorthands</summary>
+       <p>Some proeprties like font, background, padding, border are known as shorthands because the allow you set multiple proeprty values in a single line. For instance<br>:</p>
+       <xmp>
+        padding: 5px 3px 10px 11px;
+        /*This sets padding in the order top, right, bottom, left. 
+       </xmp>
+      </details>
+
+      <details>
+          
+          <summary>comments</summary>
+       <p>When tou come back to your code days later, you might not undrstand at all what your code. That is why we have comments, to explain code, in programming languages. In CSS, it's syntax is: /*The comment goes here*/ </p>
+      </details>
+        <details>
+            <summary>White Space</summary>
+            <p>You don't have to write each proeprty and it's value in it's own line. You can justw rite another proeprty-value pair next to closing semicolon, and anotehr one and then anotether one. Although, each team and individual have their own prefreneces, it looks betetr to read the first. </p>
+        </details>
+        <h2>A deeper Drink</h2>
+        <details>
+            <summary>float</summary>
+            <p>Although it's very detailed, what you need to know mostly is that it can be used for multi column layouts with a bit of finicking.</p>
+        </details>
+        <details>
+            <summary>Positions</summary>
+            <p>By default elements are static. Just note that it's better to set the property box-sizing to border-box, that way any element will have nothing but your specifieid width.</p>
+        </details>
+        <details>
+            <summary>flexbox</summary>
+            <li>If you set the display property of a container to flex, element contained go in one line. This can 
+                be fixed by adding flex-wrap: wrap, or to nowrap or to wrap-reverse.
+            </li>
+            <li>flex-direction proerty cna be set to row, column, row-reverse, and column-reverse to specify which direction elements go.</li>
+            <li>justify-content property for the parent especifies how to distribute elemenets. it can be flex-start, flex-end, center, space-between
+            space-around or space-evently. The vertical vertion of this is align-content.
+            </li>
+        </details>
+        <details>
+            <summary>grid</summary>
+            <p>This is a 2d grid system working with columns and rows. Here is how it works:</p>
+            <li>You can setup a grid of parent through the display:grid; and then next line, put, grid-template-columns: x%,x%...n;,where n is the number of columns. To put an element in certain row and column, do Grid-column-start: 3;</li>
+            <li>If you want an element to span multiple columns, add grid-column-end.</li>
+            <li>-1 is the first grid column from right and so on. Or you cna just do span 2 for either of the properties.</li>
+        </details>
+        <details>
+            <summary>Background</summary>
+            <li>To make a background transparent set the backgroudn-color to grbpa, where last argument ishow transparent its. </li>
+            <li>Adding a background image: background-image: url("url");</li>
+            <li>
+            to make backrgound fit all page, set background-rebeat to no-repeat, and set background-size: to cover.
+            </li>
+            <li>an example of gradient is: background: linear-gradient(to right, skyblue, white); you cna change direction, lookup. there is also radial gradient</li>
+        </details>
+        <details>
+            <summary>
+                UX-User Experience
+            </summary>
+            <p>Focus on efficiency and efefctiveness in which users cna use yoursite, then worry about the style.</p>
+        </details>
+        <details>
+            <summary>Responsive Design</summary>
+            <p>Media Quiries explaiend in @ rules ablove And Fluid layout deisgn(to use % instead of fixed px).</p>
+        </details>
+    </body>
+</html>

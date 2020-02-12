@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Tags</title>
+        <meta charset="utf-8">
+        <style>
+            dt{
+             font-weight: bold;
+            }
+            body{
+                padding-right: 100px;
+                padding-left: 100px;
+                line-height: 1.2;
+            }
+            p{
+                font-weight: 100;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="all.css">
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav>
+        <header><center>Computer Explorer</center></header>
+        <ul class="nav_ul">
+            <li><a href="index.html" class="nav_a">Home  </a></li>
+        </ul></nav>
+        <div class="inner_container">
+        <details>
+            <summary>What is a html tag</summary>
+            <p>HTML is a markup language. A markup language is a language that it's text is "marked-up" like annotation, that way, a document of a markup language contains distict parts. Inorder to transfer web documents to all computers, we need a language undrstood by all computers. As such there are rules for HTML. Any text, must be encapsulated by closing and opening tags. All tags, with small exceptions, most be opened and closed.For example, the skeleton of a HTML document, such as this one you're reading looks like this:<br></p>
+            <xmp>
+                <!DOCTYPE html>
+                <html lang ="en">
+                    <head>Within these tags goes information read mainly for browsers and search engines</head>
+                    <body>Within this tag goes information read by users</body>
+                </html>
+            </xmp>
+            <p>Watch  <a href="https://www.youtube.com/watch?v=aSiI9B6rzRM">this</a>  1 minute video to undrstand how tags work. Below, we will explore parts and piaces of a HTML documents such as the one given above.
+            
+        </details>
+<!-------------------------------------------------->
+        <details>
+            <summary>&lt;!DOCTYPE html&gt;</summary>
+            <p>The w3c website highly stressis that this at the top of any html document. Why? Because it notifies browsers that this is a html document and it oughto be interpreted according to the rules of the markup language.</p>
+        </details>
+<!------------------------------------------------->
+        <details>
+            <summary>&lt;head&gt;</summary>
+            <p>Websites have two audiances: humans and spiders(crawlers) +bots+computers. Although the head is visible little to humans, it’s important for the other audience.  The best thing you can do for them is make a good title.  Title is what appears in the search engine and at the top of your tap for any page..</p>
+        </details>
+<!------------------------------------------------->
+        <details>
+            <summary>&lt;meta charset="#"&gt;</summary>
+            <p>This is a characterset mete tag( a mete tag is a tag that especifies the characetr of the rest of the content). In this case, it specifies teh type of the language you're using. . If you’re using other language then English, be sure to be using the correct character set but in english, it wouldb be &lt;meta charset="utf-8"&gt;. This one of the veiw tags in HTML that is not closed. This tag goes within the head tags. </p>
+        </details>
+<!------------------------------------------------->
+        <details>
+            <summary>&lt;body&gt;</summary>
+            <p>The body tag of a html document contains everythign that the user sees. All the text, you're reading, except the navigation which sometimes goes in a header tag, goes within the body tag.</p>
+        </details>
+        <details>
+            <summary>&lt;h1&gt;...&lt;h2&gt;</summary>
+            <p>When you read a blog, you notice it contains a title which you read. Any essay contains a title. Therefore, HTML documents contain a header. There is six header tags that are inorder of decending sizes. The biggest title is &lt;h1&gt;&lt;/h1&gt; and the smallest is &lt;h6&gt;</p>
+            For example, the text: <h1>This Is an Example of h1</h1> is header of h1. 
+        </details>
+<!------------------------------------------------->
+        <details>
+            <summary>&lt;p&gt;</summary>
+            <p>This replaces the ubiquitous &lt;font&gt; tag from html4, which doesn’t work now. It's aparagraph tag and we use to encapsulate it with paragraphs. </p>
+        </details>
+<!------------------------------------------------->
+        <details>
+            <summary>&lt;ul&gt;</summary>
+            <p>Unordered-list, use li for elements of the list; &lt;ol&gt; is ordered-listed. Lists can be indexed. In that case, make a firm friendship with indents. For example, here is an unordered list with three elements:<br>
+            </p>
+            <ul>    
+                <li>air</li>
+                 <li>water</li>
+                 <li>food</li>
+            </ul>
+            and here is the corresponding syntax:
+            <xmp>
+                <ul>
+                 <li>air</li>
+                 <li>water</li>
+                 <li>food</li>
+                </ul>
+            </xmp>
+        </details>
+<!------------------------------------------------->
+        <details>
+            <summary>The &lt;dt&gt; and &lt;dd&gt;</summary>
+            <p>his is what I'm using to define the terms. It's called a term definition list. It's helpfull in FAQs(Frequently asked auestions) and question answer blogs as well. For example, consider the following term and it's definition:<br></p>
+            
+            <dt>asynchronouse</dt>
+        <dd>In computers, only carrying out an operation, after the previous one has been has been finished</dd>
+            <p>Here is he syntax:<br></p>
+            <xmp>
+             <dt>asynchronouse</dt>
+        <dd>In computers, only carrying out an operation, after the previous one has been has been finished</dd>
+            </xmp>
+        </details>
+ <!------------------------------------------------->
+        <details>
+            <summary>&lt;a&gt;</summary>
+            <p>This is tge anchor tag, or the link tag. The Anchor tag. Format: &lt;a href=””>Click label&lt;/a>. If no file name is in the url, it’s assumed to be the index. To open in another tab, inside the opening tag, add target=”_blank”></p>
+        </details>
+ <!------------------------------------------------->
+        <details>
+            <summary>&lt;table&gt;</summary>
+           <p> Aye, there is the rub. For in this tag lies complexity. First in it's most basic way, it's form looks like:<br></p>
+           <xmp>
+            <table>
+                <tr>
+                    <td colspan="2">Row 1 - Col 1 and Col 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2 - Col 1</td>
+                    <td>Row 2 - Col 2</td>
+                </tr>
+            </table>
+            </xmp>
+            
+            <p> Think of it like a tree diagram. After the table opening tag, the first indenting level is the rows(&lt;tr>). Then, the 2nd indenting level is the table data. Each row can have multiple data. Oky! Then how do you do something like say where you have one cell spanning multiple columns.</p>
+            <table border="1">
+                <tr>
+                    <td colspan="2">Row 1 - Col 1 and Col 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2 - Col 1</td>
+                    <td>Row 2 - Col 2</td>
+                </tr>
+            </table>
+       <p> Simply, to that cell, you add after td colspan="#". Look at the source code to the table above as example by right clicking it and then choocing inspect element. Also, it can be done the otherway. For example, you can add to a cell after dt that rowspan="#". For table data(td) in row 1, you can replace the td with th to indicate that they're table headers. The colgroup tag allows you to style a numver of columns together. Inside it, in col tag, add span="3" to dinciate the number of columns from left to apply the style to. In addition, you can rub around the th tags with thead tag, the tr with tbody and the foot(as in sum or totals) with tfoot tag. phew!</p>
+        </details>    
+        
+<!----------------------------------------------------->
+        <details>
+            <summary>&lt;strong&gt;</summary>
+            <p>>Here, we enter the sematics(study of meaning) of html. The strong tag puts a text in bold whilst telling the bots-spriders-crawlers that this text is important. To human it makes a thing just the sameway putting the text around &lt;b> would; however, the meain difference between the two is that text in strong is considered important in bot world.</p>
+        </details>
+<!----------------------------------------------------->
+        <Details>
+            <summary>&lt;div&gt;</summary>
+            <p>he div tag is a general purpose tag. You can use it basicly for anything. By adding it to a class(this is css ignore if you don't know what that is for now, focus on html5), or an ID, you will be able to manipulate and tailor it according to your needs. </p>
+        </Details>
+<!----------------------------------------------------->
+        <details>
+            <summary>&lt;Header&gt;</summary>
+            <p>This replaces previous partial role of div as "header" in html5. Everypage, almost, contains a header section, which portrays what the page is about, and what it's called. It helps with SEO(search engine obtimaization). The bots+crawlers+spiders know what is in the header.</p>
+        </details>
+<!---------------------------------------------------->
+        <details>
+                <summary>&lt;nav&gt;</summary>
+            <p>It's what it sounds line, navigation. It imbodies major links that users might need to navigate through in the website.  Ordinarily, the nav is put inside the header, however, on such cases where the website has multiple navigations, or other anomalies, it is placed elsewhere. </p>
+        </details>
+<!-------------------------------------------------->
+        <details>
+            <summary> &lt;article&gt;</summary>
+            <p>In the words of teacher, Barrio Jucanya, "this is where the rubber meats the road." The real content, as in article, is done in here. With styling of the width and display of "table" it would be placed an appropriate place in the site(If you don't know this, this is css, ignroe it for now and focus on HTML). </p>
+        </details>
+<!-------------------------------------------------->
+        <details>
+            <summary>&lt;footer&gt;</summary>
+            <p>The footer element goes at the bottom of the page and contains all the information, that is missing elsehwere in the site. Footer, article, nav and header are almost essentiel elements of any website.</p>
+        </details>
+<!------------------------------------------------>
+        <details>
+            <summary>&lt;aside&gt;</summary>
+            <p>The aside element is for anything that is not necesserily related to the main point of the page, things like advertisemt. </p>
+        </details>
+<!----------------------------------------------->
+        <details>
+           <summary> &lt;section&gt;</summary>
+            <p>Also, part of  semantic html. Slightly more weighed by a search engine then a div, because it has a sematic(meaning), the div can be used for other then main content things.</p>
+        </details>
+<!---------------------------------------------->
+        <details>
+            <summary>&lt;img&gt;</summary>
+            <p>The space created by this tag is useed to load the image from another file. This element doesn't have a closing tag, but to suplly the name-path of the image you want uplouded(assuming it's in the same folder), put scr="name-path of image file" inside the opening tag. To help people with impaired vission, or otherwise just have an explanation text, put also inside the opening tag alt="explanation". Put it together, it should looklike soemthing like this: &lt;img scr="image's saved name" alt="description text"&gt;. The source url(src) for the image doesn't have to be from your device(relative path), it can be an absolute path(a url from the internet somewhere else)</p>
+        </details>
+<!----------------------------------------------->
+        <details>
+            <summary>&lt;map name = "what ever you name it"&gt;</summary>
+            <p>Quite intrestingly, you can link an image, that means you can make it so that when you click in it, it takes you to a link. To do so, you simply put the image tag inside an anchor tag. Now, what is this map name=.. thing? Well, more intrestingly, you can make diffrenet parts of your image take you different places. For example, the rightside of this image takes you to w3 website, while the left side takes you to google. Try it and look at the source code.</p><br>
+            <img width="200" height="200" src="ex1.png" usemap="#left-right">
+            <map name="left-right">
+                <area shape= "rect" coords = "0,0,100,100" href="https://www.w3schools.com/" alt="left" title="left">
+                <area shape= "rect" coords = "100,0,200,200" href="https://www.google.com" alt="right" title="right"> 
+            </map>
+            <p>Here is the syntax that amde this work: <br></p>
+            <xmp>
+                <img width="200" height="200" src="ex1.png" usemap="#left-right">
+                <map name="left-right">
+                    <area shape= "rect" coords = "0,0,100,100" href="https://www.w3schools.com/" alt="left" title="left">
+                    <area shape= "rect" coords = "100,0,200,200" href="https://www.google.com" alt="right" title="right"> 
+                </map>
+            </xmp>
+            <p>I did couple of things to make this happen: (A) I put it usemap = "name" inside the image tag to declare that I will make a map. (B) I opened a map tag (with name="your declared name in image-tag" inside it). (c) And finnaly, inside the map, I specified to area tags that are rectangles. Inside the two area tags, I especify the shape of the parts as rectangles. The coords thing inside these two areas especifies there location. First, know that "0,0" location is the top-left of the image. So, I started the first area from 0,0, then the following number, x, from 0 to that x, the last fourth number is from zero to that especified y, in this case, 200. Phew! If you don't get it, look it up, I know I did very bad job of explaining, sorry! Hopefully, it gives a starting point. </p>
+        </details>
+<!------------------------------------------------>
+        <details>
+            <summary>&lt;form&gt;</summary>
+            <p>To get information from users, you need a form that users need to fill out. It starts with the simple form element</p>
+         </details>
+<!----------------------------------------------->
+        <details>
+            <summary>&lt;input&gt;</summary>
+            <p>The form is the container for the "inputs", things like enter-username, that gather information from the user. Within the opening and closing tag of a form, we put as many inputs as we want. There are however, many types off inputs:<br></p>
+            <ol>
+            <li>text, a one line entry. Here is its syntax: &lt;input type="text" name="the_name" size="20", value=""&gt; and here is how a text input type looks like: 
+            <input type="text" name="the_name" size="20" value="">. The name attribute is the name for the variable that stores the information for this particular input. So, later, when a programmer wants to process it, the programmer recalls the name of the variable. You can call the variable wharever you want. 
+            </li>
+            <li>email. Here is its syntax: &lt;input type="email" name="the_emailname" size="20", value=""&gt; and here is how it looks like: 
+            <input type="email" name="the_name" size="20" value="">.
+            </li>
+            <li>age. Here is its syntax: &lt;input type="age" name="age" size="20", value=""&gt; and here is how it looks like: 
+            <input type="age" name="age" size="20" value="">.
+            </li>
+            <li>number. Here is its syntax: &lt;input type="number" name="number" size="20", value=""&gt; and here is how it looks like: 
+            <input type="number" name="the_namber" size="20" value="">. The difference between it and text is that the browser checks this is a number.
+            </li>
+            <li>radio. Used for one choice input. Here is its syntax:<br> drive&lt;input type="radio" name="commute_method" size="20", value="drive"&gt;<br> walk&lt;input type="radio" name="commute_method" size="20", value="walk"&gt;<br>pike&lt;input type="radio" name="commute_method" size="20", value="pike"&gt; and here is how it looks like: <br>
+            drive<input type="radio" name="commute_method" size="20" value="drive">.<br>
+            walk<input type="radio" name="commute_method" size="20" value="walk">.<br>
+           pike <input type="radio" name="commute_method" size="20" value="pike">.<br> Notice, you can only select one of these options and not two, that is how a radio-input-type differes from checkbox type, which i descrive next. Aslong as a group of radio boxes have the same name, you can only select one at a time.. Also notice, to put their respective  commute type next to radio buttons, I simply put the word "drive" or "pike" next to the input.
+            </li>
+            <li>
+                checkbox. It's imply either checked by the user(true) or not cheked by the user(false). In contrast to previous radio inputs, you can select multiple chekboxes. Here is their syntax: 
+                &lt;input type="checkbox" name= "partime" value="partime"&gt;<br>
+                &lt;input type="checkbox" name= "full-time" value="part-time"&gt;<br>
+                and here is how they look:
+                partime <input type="checkbox" name= "partime" value="partime">
+                full-time<input type="checkbox" name= "full-time" value="part-time">
+            </li>
+            <li>
+                country. It's, INTRESTINGLY, used for getting a country input from the user. This is how it's done:
+                &lt;select name="country"&gt;<br>
+                     &lt;option value="none selected"&gt;please select below &lt;/option&gt;<br>
+                     &lt;option value="Afghanistan"&gt;Afghanistan&lt;/option&gt;
+                &lt;select&gt;<br>
+                You can obviosly add more countries and better yet, make the options something other then country, like ethnicity. Here is how it looks like:<br>
+                <select name="country"><br>
+                    <option value="none selected">please select below </option><br>
+                    <option value="Afghanistan">Afghanistan</option><br>
+                </select>
+            </li>
+            <li>
+                textarea. If you want to gather a large amount of text, what you need is text area. Here is how it's done:
+                &lt;textarea name="comment" rows="4" maxlength="200" colls="70"&gt;&lt;textarea&gt;<br>
+                Here is how it will render in browser:<br>
+                <textarea name="comment" rows="4" maxlength="200" colls="70"></textarea><br>             
+            </li>
+            <li>
+                hidden. We can also collect information that the user didn't supply such as device information. that is done by hidden input type. 
+                &lt;input type="hidden" name="device_width" value=""&gt; 
+            </li>
+            <li>Submit. This, obviosly, goes at the bottom of the form after all otehr inputs. When user is done supplying the information though the other inputs, he/she clicks submit to send the row data to the "Servers" where the data gets processed. <br>
+            <input type="submit" name="submit" value="submit">
+            
+            </li>
+        </ol>
+        </details>
+<!------------------------------------------------------->
+        <Details>
+            <summary>&lt;abbr title="United states"&gt;US&lt;/abbr&gt;</summary>
+            <p>This is how you display appreviations in html. It gives usefull information to Searhc-engines, browsers and translation systems. Take for example, the apreviation <abbr title="United States">US</abbr>. If you're using chrome, notice this is underlined. If you however over it, it should tell you what it stands for.</p>
+        </Details>
+<!-------------------------------------------------------->
+        <details>
+            <summary>&lt;address&gt;</summary>
+            <p>The address tag wrapped around the email doesn't do anything display wise(Exept to tialisize what is in it or eprhaps to add breaks, by some browsers before and after). For example, this is how you might use this to link your email, or physical address:<br> </p>
+            <address>author:<a href="mailto:name@example.com"> Zakariye Yusuf</a></address> 
+            <p>Here is the syntax of the above address display:</p>
+            <xmp>
+               <address>author:<a href="mailto:name@example.com"> Zakariye Yusuf</a></address>  
+            </xmp>
+        </details>
+<!-------------------------------------------------------->
+        <details>
+            <summary>&lt;object width="" height="" data="supllyfilename.extention"&gt;</summary>
+            <p>This tag is used embed other objects to our html page, objects like video, audio and even other html pages. Below, I use this element to embed the frontpage of this page:<br>
+            <object width="200" height="200" data="index.html"></object></p>
+        </details>
+<!-------------------------------------------------------->
+        <details>
+            <summary>&lt;audio&gt;</summary>
+            <p>This is how you embed audio in your pages. Look at this audio:<br></p>
+             Result of up audio embedding: <audio controls><source src="horse.ogv"></audio>
+            <p>Here is its syntax:<br></p>
+            <xmp>
+                <audio controls><source src="horse.ogv"></audio>
+            </xmp>
+        </details>
+<!------------------------------------------------------->
+        <details>
+            <summary>&lt;base&gt;</summary>
+            <p>This is a  way to supply only the last part of sources to a hyperlink. For example, you can put in the head:<br>
+        &lt;base href="www.youtube.com/channels/"&gt; <br>
+        and then when you later want to link a channel to your page, you don't need to type the intire url, you can just type:<br>
+        &lt;a href="The name of the channel"&gt; <br> Many times, it can be cumbersome and hard to read a html code that contains a very long url. Therefore, the base tag helps minimize this by allowing you to write only the last part of a url if many url's have the same base.</p>
+            
+        </details>
+<!------------------------------------------------------>
+        <details>
+            <summary>&lt;bdi&gt;</summary>
+            <p>Stands for biderectional Isolation. It's used when the direction of the text supplyed by the user, as in username, is not known. It could be arabic(which is from right to left as opposed to english), therefore to be explecit about that ignorance, we put the username around bdi tag. For more informaiton in w3c click <a href="https://www.w3.org/International/articles/inline-bidi-markup/">here</a></p>
+        </details>
+<!------------------------------------------------------>
+        <details><summary>&lt;bdo&gt;</summary>
+            <p>ands for bidirectional ovveride. If you wrap this tag around anytext it would change it's direction to your specification. For example this:<br>
+        &lt;bdo dir="rtl"&gt;Hey, how r you!&lt;bdo&gt; results in in left to write:<br>
+        <bdo dir="rtl">Hey, how r you!</bdo> <br>In contrast, a dir of ltr results in a left to right text. </p>
+        </details>
+<!----------------------------------------------------->
+       <details>
+           <summary>&lt;blockquote&gt;</summary>
+           <p>It's used to quote mla/apa block quotes. Wrapping text around block quotes would cutted form the rest of the text in porpaply formatted block. You can put inside the opening tag cite="the website you're citing". For example<br></p>
+           <blockquote cite="Khan Academy">We send information through computers using wires that represent 1s and 0s. Computers need a way to manipulate those 1s and 0s, so that they can eventually do more complicated operations like calculating the 50th digit of \piπpi.
+Computers use logic gates to transform the 1s and 0s from input wires. A logic gate accepts inputs and then outputs a result based on their state.</blockquote>
+            </details>
+<!--------------------------------------------------->
+        <details><summary>&lt;Canvas&gt;</summary>
+            <p>the canvas tag is a container that is used to draw graphics or make games via scripting language, such as javascript. </p>
+        </details>
+<!--------------------------------------------------->
+        <details><summary>&lt;caption&gt;</summary>
+            <p>Placed just after the opening tag of the table, the caption tags opening and closing tags contain teh title of the table. It's autamaticly centered.</p>
+        </details>
+<!--------------------------------------------------->
+        <details><summary>&lt;cite&gt;</summary>
+            <p>The cite tag defines the title of a work. As such, it italisises what it's opening and closing tags encompass.</p>
+        </details>
+<!--------------------------------------------------->
+           <details><summary>&lt;code&gt;</summary>
+               <p>Just used to contain a piece of code. With CSS, it can be usefull!</p>
+           </details>
+<!--------------------------------------------------->
+           <details>
+               <summary>command</summary>
+               <p>the command tag is used to hold used to hold events that the user can invoke. With the onclick emthod, it can be usefull with javascript.</p>
+           </details>
+<!--------------------------------------------------->
+        <details>
+            <summary>&lt;datalist&gt;</summary>
+            <p>When you want a user to select from a list of things, you use the datalist tag. For example, if I want people to select from a list of oeprating systems, this is it's syntax:</p>
+             <xmp>
+        <input list="operatingSystems" name="operatingsystems">
+        <datalist id="operatingSystems">
+            <option value="linux">
+            <option value="Windows">
+            <option value="MAC OS X">
+        </datalist></xmp><br>
+        And this is how it appears:<br>
+    <b>Select One</b> <input list="operatingSystems" name="operatingsystems">
+        <datalist id="operatingSystems">
+            <option value="linux">
+            <option value="Windows">
+            <option value="MAC OS X">
+        </datalist>
+        </details>
+<!--------------------------------------------------->
+        <details>
+            <summary>&lt;del&gt; and &lt;ins&gt;</summary>
+            <p>A text wrapped around a del opening and closing tag is considered to be deleted one, and as a result is striken_-line through. Conversely, a text wrapped around ins tag is considered to be the new one. For ex: <br>I commute through <del>driving</del> <ins>public transportation.</ins>.<br> Look at the source code of the example.</p>
+        </details>
+<!-------------------------------------------------->
+        <details>
+            <summary>&lt;detail&gt;</summary>
+            <p>Together with summary tag this is really cool tag.  When you're reading, you click one of the drag downs and it opens to for an explanation, right? But how? consider the following example.<br></p>
+            <details>
+                <summary>This Website</summary>
+                <p>This is the main tool I used to define this website. All knowledge contained within this website is free for anyone everywhere who has the drive to law for it's meat.</p>
+            </details>
+        This is it's syntax:<br>
+            <xmp>
+                <details>
+                    <summary>This website</summary>
+                <p>.All knowledge contained within this website is free for anyone everywhere who has the drive to law for it's meat.</p><br>
+                </details>
+            </xmp>
+        </details>
+<!---------------------------------------------------------->
+       <details>
+           <summary>&lt;dfn&gt;</summary>
+           <p>Mouse over this term: <dfn title="machine language is the native language of computers. It is amde up of a seriies of bindary(0 and 1), like 011001110, that the computer inetrprets to eman soemthing. they're executavle, meaning they can be run directly. Next up to machine language is assembly language, which tries to make machine language humanly. The binary code of a machine language is replaced with pneamonic words. A especiel program known as assembler translates between the assembly language and the machine language. Each especific CPU has it's own assembly language. *">machine-language*</dfn> You sea, this term is italicised and it's definition is given whenn you you hover your mouse over it because I used the dfn tag. This is it's syntax:<br>
+        &lt;dfn title="The definiton goes here"&gt;the term goes here&lt;/dfn&gt;</p>
+       </details>
+        
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;em&gt;</summary>
+                <p>em stands for emphasize and whenever a text is contained in opening and closing tags of em, it's italisised.</p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;embed&gt;</summary>
+                <p>the embed tag is used to embed other things that require plugins. Things like web pages. for example I embedded the front page of this website here<br> 
+                  <embed src="index.html"
+                   width="250"
+                    height="200">  <br>
+                This is it's syntax:
+                 &lt;embed src="source Of the page or other pluggin"&gt;        
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;fieldset&gt;</summary>
+                <p>the feildset tags groups related elements together by putting a good looking box around them. Take this form for example:<br></p>
+                <fieldset>
+                    <legend>SchoolInfo:</legend>
+                    School: <input type="text">
+                    Phone: <input type="tel">
+                    email: <input type="email">
+                </fieldset>
+                <br>Even certain parts of a form can be grouped together using this syntaxt, which looks like this:
+                &lt;fieldset&gt;<br>
+                    &lt;legend>SchoolInfo:&lt;/legend><br>
+                    School: &lt;input type="text"><br>
+                    Phone: &lt;input type="tel"><br>
+                    email: &lt;input type="email"><br>
+                &lt;/fieldset>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;figure&gt; and &lt;figcaption&gt;</summary>
+                <p>Images and other figures come up with a caption, we can put the image tag and it's caption inside a figure tag as in:<br>
+                &lt;figure><br>
+                &nbsp &nbsp &nbsp &nbsp &lt;img src="source"><br>
+                &nbsp &nbsp &nbsp &nbsp &lt;figcaption&gt;put the caption of the image or figure here&lt;figcaption&gt;<br>
+                &lt;figure&gt;
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;iframe&gt;</summary>
+                <p>Basicly the object tag explaine dpreviously, except that iframe tag has a slightly different syntax.  for example, instead of data parameter, it has an src parameter. This is how it looks like:
+                &lt;iframe src="the path of the html document to append"&gt;&lt;iframe.<br>
+                    <iframe src="aaa.pdf" height="300"></iframe> <br>
+                Here is the power that the iframe tag gives you:<b><i>It allows you to append pdf. You can also append word docx in it, but it won't show up. It will just be downloaded  to your bc as soon as you loud the html page containing it. Cool stuff! </i></b>
+                    </p>
+                
+            </details>
+ <!------------------------------------------------------->
+            <details>
+                <summary>&lt;kbd&gt;</summary>
+                <p>If you want to tell a user press a certain key, for example <kbd>control+e</kbd>, to do soemthing, you would put the key around kbd tags. Notice how the key contol + e changed font.</p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;keygen&gt;</summary>
+                <p>???</p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;label&gt;</summary>
+                <p>Labels are joined with radio boxes to use them. Consider the following radio boxe and label:
+                <label for="oeprating System">Freewil</label>
+                <input type="radio" name="operatings">
+                This si marely done by putting a label tag near the radio tag. Here is the syntax:<br>
+                &lt;label for="operating System">Freewil&lt;/label><br>
+                &lt;input type="radio" name="operatings">
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;link&gt;</summary>
+                <p>The link tag, putted in the head of the document is used to link a html document to a cascading stle sheet(CSS) document. the word cascading cna mean arrangement. Here is it's syntax:<br>
+                &lt;link rel="stylesheet" type="text/css" href="the path to the css document">
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;mark&gt;</summary>
+                <p>The mark element highlights <mark>something</mark> like this. <br>
+                to mark the word something, here is the syntax I used:<br>
+                    &lt;mark&gt;something&lt;&gt;
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;menu&gt;</summary>
+                <p>the menu tag is currently only supported by firefox in mainstream browsers. However, it's intended fo context menus or toolbars. In firefox, a user must right click to view the menu. <a href="https://www.w3docs.com/learn-html/html-menu-tag.html">Here</a> is more information about the menu tag
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;meter&gt;</summary>
+                <p>The meter element is used to portray a certain measurement. For example, here below I use it to show you the amount of cars that are electric in the U.S<br>
+                <meter value="0.2" min="0" max="10"></meter>**<br>
+                The meter tag has atributes: value(the percent you want to show), min(the starting point which should be zero) and max(which I suggest 10). Put together, here is the syntax:<br>
+                &lt;meter value="0.2" min="0" max="10"&gt;&lt;/meter&gt;
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;noscript&gt;</summary>
+                <p>Sometimes, when a user disables scripts in their browser, or the browser doesn't support it, we don't want our program, which was written in scripting language like javascript, to haphazardly crush. We want to handle the exception(also known as error handling) that the browser can't run scripts by pritning alternate text. So, the text you put inside the no script tags will show up as an alternative. Try disabling javascript in your broser  and see if you could get the noscript text as an alternative.  
+                </p>
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;optgroup&gt;</summary>
+                <p>This tag is used to group certain options that are similar in html tags. As an example, observe the following select options:<br>
+                    <select>
+                        <optgroup label="Some Westren Languages">
+                            <option value="English">english</option>
+                            <option value="French">French</option>
+                        </optgroup>
+                        <optgroup label="some eastren languages">
+                            <option value="Chinese">Chinse</option>
+                            <option value="Arabic">Arabic</option>
+                        </optgroup>
+                    </select><br>
+                    notice how there groups of the options. This is done by grouping related options by the optgroup tag. Here is the syntax:<br>
+                    &lt;select><br>
+                        &lt;optgroup label="Some Westren Languages"><br>
+                            &lt;option value="English">english&lt;/option><br>
+                            &lt;option value="French">French&lt;/option><br>
+                        &lt;/optgroup><br>
+                        &lt;optgroup label="some eastren languages"><br>
+                            &lt;option value="Chinese">Chinse&lt;/option><br>
+                            &lt;option value="Arabic">Arabic&lt;/option><br>
+                        &lt;/optgroup><br>
+                    &lt;/select><br>
+                </p>
+                
+            </details>
+<!------------------------------------------------------->
+            <details>
+                <summary>&lt;input type range&gt;***</summary>
+                <p>this is a cool input type that it gets it's own tag definiton although not a tag. If I wanted u to tell me how much u abhor greediness, I would give u a range to select, as in:<br>
+                
+                </p>
+                0<input type="range" id="greediness" oninput="printh()">100
+                <div id="rangein"> </div>
+                <script>
+                    function printh(){
+                        document.getElementById("rangein").innerHTML = ""
+                        inputtt = document.getElementById("greediness").value;
+                       document.getElementById("rangein").innerHTML += "greediness: "+ inputtt.toString(10);
+                      
+                    }
+                    
+                </script><br>
+                <p>Obviosly, I used javascript to output your set level of greediness to the page; if u want the whole thing, look at the source code. However, in pure html, the range input type is always between 0 and 100. To put it in your page, here is the syntax:<br>
+                &lt;input type="range"></p>
+            </details>
+<!--------------------------------------------------------------------------->
+            <details>
+                <summary>&lt;output&gt;</summary>
+                <p>The output elemen is used to to present the output of culculations. The output tag has three attributes:<br>
+                </p>
+                <ul>
+                    <li>for: this contains the ID's of the elements that went into culculation, separted by spaces.</li>
+                    <li>form: takes the ID of the form that owns this output. This way you can put the output tag outside of a form.</li>
+                    <li>name: The name of the tag</li>
+                </ul>
+                Example:<br>
+                <form onsubmit="return false" oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+                    <input name="a" type="number" step="any"> +
+                    <input name="b" type="number" step="any"> = 
+                    <output name="o"></output>
+                </form>
+                The answer of the addition is outputed using some javascript and in the form element. Don't stew, not a hard stuff to undrstand. Here it's syntax:<br>
+                <xmp>
+                <form onsubmit="return false" oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+                    <input name="a" type="number" step="any"> +
+                    <input name="b" type="number" step="any"> = 
+                    <output name="o"></output>
+                </form>
+                </xmp>
+                To undrstand this stuff, notice that o is the name of the output, b is the name of the firs number input and c is the name of the second input. Notice also, that the form says on input, the value of o(o.value) equals the aparseInr(html inputs are given in strings, so this command chnages it into an integer so that it could be added) of a value plus the parseInt of b value. Simple. 
+            </details>
+<!--------------------------------------------------------------------------->
+            <details>
+                <summary>&lt;param&gt;
+                </summary>
+                <p>The param tag is used to output to pass paramteter(attributes) to the object tag, which we explained earleir in the object tag. For example, here is how we can set the height and width attribute of an imbedded page:<br>
+                <xmp>
+                    <object title="imedded object" data="supply file path">
+                        <param name="width" value="100">
+                    </object>    
+                </xmp>
+                </p>
+                
+            </details>
+            <details>
+                <summary>&lt;q&gt;</summary>
+                <p>The q tag defines a quoatation. Wrapping text around q tag puts the text outamaticly in <q>quotation marks.</q> </p>
+            </details>
+            <details><summary>&lt;rp&gt;/&lt;ruby&gt;/&lt;rt&gt;</summary>
+            <p>Some languages, such as chinese, Kurian and Arabic have what is known as ruby annotations. These help with those characters. For more informaion on how to use them, <a href="https://www.developphp.com/lib/HTML/rb-rp-rt-rtc-ruby">read here</a></p>
+            </details>
+            <details>
+                <summary>&lt;s&gt;</summary>
+                <p>The s does the function of the del tag which was explained previosly in this page. It strikes a line through a text, like <s>this.</s></p>
+            </details>
+            <details>
+                <summary>&lt;samp&gt;</summary>
+                <p>The samp tag defines a computer output. It changes the font of that given sample out put to memic <samp>computers output.</samp> </p>
+            </details>
+<!-------------------------------------------------------------->
+            <details>
+                <summary>
+                &lt;section&gt;
+                </summary>
+                <p>The section tag sets a aprt a section of the document. </p>
+            </details>
+  <!---------------------------------------------------------->
+            <details>
+                <summary>&lt;small&gt;</summary>
+                    <p>This tag defines <small>small text</small> for other less important text, such as copyright sign.</p>
+            </details>
+<!--------------------------------------------------------------->
+            <details>
+                <summary>&lt;source&gt;</summary>
+                <p>This tag is used to supply the path of an attached audio or video. You can suplly multiple sources so that the browser deosn't haphazardly crush if it doesn't support one of them. For example, look at the audio tag in this page. </p>
+            </details>
+<!---------------------------------------------------------------->
+            <Details>
+                <summary>&lt;span&lt;</summary>
+                <p>Pretty much like div, this tag is used when other semantics are not appropriate. For example, You may use it to style a certain part of the html./p>
+            </Details>
+<!----------------------------------------------------------------->
+            <Details>
+                <summary>&lt;strong&gt;</summary>
+                <p>Alhtough it can be changed with CSS, the strong tag <strong>bolds</strong> a text.</p>
+            </Details>
+<!------------------------------------------------------------------>
+    </div>
+    </body>
+    <br>
+    <br>
+    <hr>
+    *information gotten from https://thebittheories.com/levels-of-programming-languages-b6a38a68c0f2<br>
+    ** Electric cars "achieved a record market share of 2.1% in 2018"(<a href="https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States">par 2</a>)<br>
+    ***Just heads up The particular information requires or uses some javacsript<br><br><br>
+</html>

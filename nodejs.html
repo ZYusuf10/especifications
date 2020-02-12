@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+    <details>
+        <summary>Node.Js</summary>
+        <p> A scalable, asynchronous event driven JavaScript runtime. </p>
+        <p> When JavaScript was first designed, it was only for the browser. Therefore, making impossible to write other than a website. But, node, brings JavaScript out of the browser. Hence, taking the place of ruby, PHP, C#, and Python. Node allows you to write JavaScript on a machine without a browser. Thus, it can read/write to a file, create http connections, and listen to network requests. It can do the following for you:</p>
+          <ul>
+            <li>read, update, delete, add,  a database. </li>
+              <li>collect form data</li>
+              <li>generate dynamic page content</li>
+              <li> read, update amd write files on server.</li>
+        </ul>
+        <p>Node listens to the requests and events. It reacts to it. So first you would make a file with nodejs code and then initiated it by running node filename.js in terminal.</p>
+</details>
+
+<details>
+        <summary>Serverside Coding Overview</summary>
+       <p>Server size programming allows you to tailor content for different users(dynamic site). Note:</p>
+    <li>web servers communicate with browsers using Hypertext Transfer Protocol(HTTP). A request. Is sent to the server when you for example, submit a form or search. </li>
+     <li> A static server shows the same data regardless of who requests it.  Where as a dynamic website is one yet hat generates new data as needed. The code for latter part is known as serverside programming or web applications.  </li>
+ <li> How’s dynamic data displayed? a request includes target, resource, method that’d fines required action(GET, POS
+T, HEAD, PUT, DELETE, etc), form info. </li>
+
+</details>
+        <details>
+            <summary>modules</summary>
+            <p>Just like  alibrary, they add extentions to the code. To use a module in node(built in modules), you write var name = require('http'); youcan make your own module by using he .exports keyword. Now in another file, you would just have to emport it using require, directory conventions and the name of the moduule.</p>
+        </details>
+        <details>
+            <summary>http Module</summary>
+            <p>This is a built in module that allows to transfer data over the hypertaxt transfer protocol(http). It can create a server that listens and responds. Note this about it:</p>
+            <ul><li>The function passed to it be done when som-one tries to access the espeicified port. </li>
+                <li>the req parameter has a proeprty called .url that has a value of what comes after the proper url. this is called read quiry String. So the url module allows you to parse the url atsing</li>
+            </ul>
+        </details>
+<details>
+   <summary>File system Module </summary>
+                         <xmp>var fs = require('fs');</xmp>
+  <p>Above code imports the file system module in Nodejs which allows you to read from write to, rename, and do other things to a file. This is usefull if you want to read a html document and return it. For example, make a new html file in the same folder and put a headline, paragraph and some data to read. The code below for the nodejs file displays your htmlpage upon request on specified port. </p>
+    <xmp>
+var http = require('http');
+var fs = require('fs');
+http.createServer(function (req, res) {
+  fs.readFile('demofile1.html', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    res.end();
+  });
+}).listen(8080);
+  </xmp>
+<p> Further, it can be used for creating files which you can lookup online for different ways of achieving such a task. But note, below code writes to a specified file, if the file doesn't exist it creates it and then writes to it:  </p>
+  <xmp>
+  
+fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+   </xmp>
+<p>Note, you can achieve many more things with  fs module's methods, which you can look up, but this should be good to get you started to an adventure</p>
+</details>
+        <details>
+            <summary>URL Module </summary>
+      <xmp>var url= require('url');</xmp>
+<p>Above code imports the url module.  The method url.parse() returns url object with each part of it as properties. To use it, first set the address to a string, then declare the object giving parameters of (1) the string address (2) true. Know the followig parts of the address. </p>
+   <li>url.host: the domain(lcoalhost:8080)</li>
+    <li>url.pathname: the requested files nanme after host. </li>
+   <li>url.search: what follows the filename which starts with ?. </li>
+
+    <p>But how do you serve the reqested file? One, the req argument to the function createServer has a property of url which gives the rrequested url. As such below code gives requested url if it exists, else, it writes 404 not found.<p>
+     <xmp>
+        var http = require('http');
+var url = require('url');
+var fs = require('fs');
+
+http.createServer(function (req, res) {
+  var q = url.parse(req.url, true);
+  var filename = "." + q.pathname;
+  fs.readFile(filename, function(err, data) {
+    if (err) {
+      res.writeHead(404, {'Content-Type': 'text/html'});
+      return res.end("404 Not Found");
+    } 
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    return res.end();
+  });
+}).listen(8080);
+    </xmp>
+
+
+</details>
+
+<details>
+     <summary> NPM </summary>
+    <p> The Node Package Manager is installed in your computer when you download nodejs.  It can be used to install new packages and so on. A package contains all the files you need to do a task. </p>
+</details>
+<details>
+           <summary>Events</summary>
+          <p> Events are things that happen in the machine like request made, file opened etc. Objects can fire events my using the method object.on() which takes an action and a file. To use it you need to require the events module.  Using it you can fire, create and listen for events. In nutshetll, look below code. </p>
+
+ <xmp>
+  var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
+//Create an event handler:
+var myEventHandler = function () {
+  console.log('I hear a scream!');
+}
+
+//Assign the event handler to an event:
+eventEmitter.on('scream', myEventHandler);
+
+//Fire the 'scream' event:
+eventEmitter.emit('scream');
+</xmp>
+</details>
+
+<details>
+    <summary>MDatabases for Express</summary>
+    <p>Inorder to taste the use of computers for data tracking and ordering, we need to use a database serves. It allows us to careate, read, update delete, & create informaiton(CRUD). You have a choice to use many varieties of databases , although at this time,mongoDB is the main one. </p>
+    <p>There are 2 ways one might interact with databases.(a) use databases language. (b) USe OBject Data Model(a.k.a ORM, object relational model). The later uses websites data as javascript objects, mapped later to the underlying database. Sometimes tied to databse, but others not.The later is also
+        usually slower. However, the later is more maintanable and costs less.Nodes NPM supportes many ODM/ORM. </p>
+</details>
+
+<details>
+    <summary>Mongoose Databse</summary>
+    <p>Mongo DP Is currently the most popualr and supported in the node community. MogoDb is the backend for Mongoose. </p>
+</details>
+
+<details>
+       <summary>Designing a Model</summary>
+        <p>
+            BEfore jumping, consider what you're storing, and how they relate. Have a seperate object(document or table), for eahc type of objects(classes), and for each type of datatype, list the fields you're storing about them. He're where ER/UML diagram comes to be helpfull.
+            With that, below is how to get started for mangoose via npm. Also note, that fields can have methods and instance methods.
+        </p>
+   <ul>
+       <li>Mongoose can be installed as a dependency via: npm install mongoose. Mangoose is how you will interact with MongoDb in your code. When you require mangoose, you can create schemes, save  them as models, then use those models to save data. </li>
+       <li>Settingup MongoDb: you can go to mongoDb to select a servcie, but for prudction, and prototyping, mdn recomends mogodb atlas. Go to mongodb.com/cloud/atlas and create an account(free). > build a cluster > free cluster > selectprovides with free service  >create cluster. <br /> Select colluctions onc eready.> create
+       >add my own, nfill the informaiton.Click over view. > connect > add a different ip addess and enter(0.0.0.0/0). the provission informaiton for user. > chooce  aconenction method >  connect your aplciation > copy the url and save it.</li>
+    <li>In app.js of the root, write below code to conenct to the database. where you replace the url with your acquired url:</li>
+       <xmp>
+           //Set up mongoose connection
+           var mongoose = require('mongoose');
+           var mongoDB = 'insert_your_database_url_here';
+           mongoose.connect(mongoDB, { useNewUrlParser: true });
+           var db = mongoose.connection;
+           db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+       </xmp>
+       <li>Make  models folder in the root and within, make a model docuemnt for each new model with the extention js.</li>
+       <li>Go to <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">this mdn artilce</a> scroll down to models, and copy each to the respective file made for it. This is under definining local library schema subtitle.</li>
+       <li>Now you have the models app for the site.  To test, follow the testing, last step fo the article listed above.</li>
+   </ul>
+</details>
+ <details>
+     <summary>routes</summary>
+     <p>Routers is the code that handles url. when user's request information via a url, we must have defined things things that can be displayed for them, and 
+     had setup a way they cna access it. Then we need the views for displaying that data. Behold the diagram from <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">mdn</a><img src="MVC.png">
+     </p>
+     <p>As such routes forward a request to apropriate controller, controllers get data from models, create a html to be "viewed" by user in browser. Views(tmeplates0 are 
+      used by controllers to render the data.
+     </p>
+</details>
+<details>
+    <summary>meet express's Router middleware</summary>
+    <p>A route connects a HTTP verb, a URL and a handler fucntion. Express.Router is a middleware that makes that funcitn easy. Before you make router, it's a good idea to cetch the number and details related to the url paths you will nee. For example, you will probbaly need a home page, a homepage for each specific object, and pages for creating, updating and deleting objects. Those are all derived from homeName/ path. 
+    </p>
+    <h2>Creating the route handler call back functions</h2>
+    <ul>
+        <li>Make a "controllers" folder in app root. Within that folder, mk a .js controller document corresponding to all models. </li>
+        <li><embed src="mdnRouters.pdf"/> Follow this tutorial form mdn</li>
+        <li>To summarize, what was done, router who rely on Controllers to responde(who rely on models to get access to data), where made. So routers respond to url paths, using controllers. controllers give as access to data and respond using models. The catalog contains the routers. The app composes everything and trigegrs them all.</li>
+    </ul>
+</details>
+    </body>
+</html>
