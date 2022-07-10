@@ -367,7 +367,7 @@
                 this.type = type;
               }  
               fly(){
-                //It flys by it's Creaters will!
+                //
               }
               //getetr function
               get name(){
@@ -477,8 +477,8 @@
       </details>
 <!---------------------------------------->
     
-      <details><h2>The Juice of Javascript</h2>
-              <summary>The Juice: DOM(Document Object Model) Manipulation</summary>
+      <details><h2>DOM</h2>
+              <summary> DOM(Document Object Model) Manipulation</summary>
           <p>Javascript gives us the power to manipulate when certian things happen such as a click, or they don't happen. With it you can add new elements on the fly and make your aplication more fucntional and usefull. When we do so we're manipulating the DOM. This DOM is a treatment of the markup document(such as HTML or XML) as a tree like structure. This tree has nodes with relationships between them. The node that contains another one(f.e.x, a container div) is called the parent and the nodes inside are called childs. Those who are in the same level are called siblings.</p>
           <p>You can select html nodes with javascript and assignment them to a variable and so on. Take the following simple html</p>
           <xmp>
@@ -500,7 +500,7 @@
               </li>
           </ul>
           <br>
-          <p>Nodes are objects with attributes and methods. Moreoever, we can create new nodes or elements on the fly. Take this:<br> </p>
+          <p>Nodes are objects with attributes and methods. Moreoever, we can add new nodes or elements on runtime. Take this:<br> </p>
           <xmp>
             let div1 = document.createElement('div');
           </xmp>
@@ -530,7 +530,7 @@
       </details>
 <!--------------------------------------------------->
       <details>
-        <summary>The Second Juice: Events</summary>
+        <summary> Events</summary>
         <p>Events occur as a result of somehing else, perhaps the user clicking or pressing certain keys.With javascript, we can elt that happen dynamically or demand. There are several ways to go about this:<br> </p>
           <ul>
               <li>attach fucntion attributes of html element using soemthing like onclick="function()". Example:<br>
